@@ -1,4 +1,4 @@
-import { User, Lightbulb, GraduationCap, School } from "lucide-react";
+import { Lightbulb, GraduationCap, School } from "lucide-react";
 import Button57 from "@/app/components/Button";
 import Header from "@/app/components/Header";
 import UserAvatar from "./components/UserAvatar";
@@ -32,8 +32,8 @@ export default function Home() {
               <Lightbulb size={40} className="mb-6" />
               <h3 className="text-xl font-semibold mb-1">Feedback</h3>
               <p>
-                Get instant, accurate, and specific feedback on your work. It's
-                like having a teacher 24/7.
+                Get instant, accurate, and specific feedback on your work.
+                It&#39s like having a teacher 24/7.
               </p>
             </div>
             <div className="flex flex-col items-center p-6 bg-white">
