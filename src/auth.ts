@@ -5,14 +5,6 @@ import { pool } from "@/lib/db";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PostgresAdapter(pool),
-  providers: [
-    Google({
-      authorization: {
-        params: {
-          redirect_uri: process.env.NEXTAUTH_URL,
-        },
-      },
-    }),
-  ],
+  providers: [Google],
   secret: process.env.NEXTAUTH_SECRET,
 });
