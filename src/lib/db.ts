@@ -8,4 +8,7 @@ export const pool = new Pool({
   max: 20,
   idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,
+  ssl: {
+    rejectUnauthorized: false, // Allows self-signed certificates; set to true if you're using a trusted CA
+  },
 });
