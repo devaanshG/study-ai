@@ -1,6 +1,7 @@
 "use client"; // Required for useSession in the App Router
 
 import { useSession, signOut } from "next-auth/react";
+import Link from "next/link";
 
 export default function Profile() {
   const { data: session } = useSession();
@@ -10,12 +11,12 @@ export default function Profile() {
       <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
         <h1 className="text-4xl font-bold mb-4">Unauthorized</h1>
         <p className="text-lg mb-6">You need to sign in to view this page.</p>
-        <a
+        <Link
           href="/api/auth/signin"
           className="px-6 py-2 border border-white rounded hover:bg-white hover:text-black transition"
         >
           Sign In
-        </a>
+        </Link>
       </div>
     );
   }
