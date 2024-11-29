@@ -13,9 +13,9 @@ export default async function UserAvatar() {
     );
   } else {
     return (
-      <div>
-        <img src={session.user.image || ""} alt="User Avatar" />
-      </div>
+      <Link href={"/profile"}>
+        <img width={"24px"} src={session.user.image || ""} alt="User Avatar" />
+      </Link>
     );
   }
 }
